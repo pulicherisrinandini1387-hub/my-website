@@ -1,0 +1,191 @@
+<!DOCTYPE html><html><head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css"><style>
+
+body{
+font-family: Arial, sans-serif;
+margin:0;
+
+/* Professional soft gradient background */
+
+background: linear-gradient(135deg,#1e3c72,#2a5298);
+min-height:100vh;
+}
+
+/* NAVBAR */
+
+.navbar{
+width:100%;
+background:linear-gradient(90deg,#007BFF,#0056b3);
+padding:15px 0;
+position:fixed;
+top:0;
+left:0;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.nav-container{
+width:90%;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:white;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+letter-spacing:1px;
+}
+
+.nav-links{
+list-style:none;
+display:flex;
+gap:25px;
+margin:0;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-size:16px;
+}
+
+.nav-links a:hover{
+opacity:0.8;
+}
+
+/* MAIN CONTENT */
+
+.main{
+margin-top:110px;
+text-align:center;
+padding-bottom:40px;
+}
+
+h1{
+color:white;
+margin-bottom:40px;
+font-size:34px;
+}
+
+/* COURSE GRID */
+
+.course-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+max-width:1000px;
+margin:auto;
+}
+
+/* COURSE CARD */
+
+.course-card{
+background:white;
+padding:28px;
+border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+text-align:center;
+transition:0.3s;
+}
+
+.course-card:hover{
+transform:translateY(-8px);
+box-shadow:0 18px 35px rgba(0,0,0,0.3);
+}
+
+/* BUTTON */
+
+.course-card button{
+margin-top:12px;
+background:#007BFF;
+color:white;
+border:none;
+padding:12px;
+width:100%;
+border-radius:6px;
+cursor:pointer;
+font-size:15px;
+}
+
+.course-card button:hover{
+background:#0056b3;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:900px){
+
+.course-grid{
+grid-template-columns:1fr;
+max-width:400px;
+}
+
+}
+
+</style></head><body><!-- NAVBAR --><nav class="navbar">
+<div class="nav-container"><div class="logo">Microlearning</div><ul class="nav-links">
+<li><a href="dashboard.html">Home</a></li>
+<li><a href="#courses">Courses</a></li>
+<li><a href="progress.html">Progress</a></li>
+<li><a href="index.html">Logout</a></li>
+</ul></div>
+</nav><!-- MAIN CONTENT --><div class="main"><h1>Microlearning Courses</h1><div class="course-grid" id="courses"><div class="course-card">
+<h3>Python</h3>
+<p>Learn Python basics</p>
+<a href="videos.html?course=python">
+<button>Start</button>
+</a>
+</div><div class="course-card">
+<h3>DSA</h3>
+<p>Data Structures & Algorithms</p>
+<a href="videos.html?course=dsa">
+<button>Start</button>
+</a>
+</div><div class="course-card">
+<h3>C++</h3>
+<p>C++ programming fundamentals</p>
+<a href="videos.html?course=cpp">
+<button>Start</button>
+</a>
+</div><div class="course-card">
+<h3>C Language</h3>
+<p>Learn C programming</p>
+<a href="videos.html?course=c">
+<button>Start</button>
+</a>
+</div><div class="course-card">
+<h3>HTML</h3>
+<p>Build websites</p>
+<a href="videos.html?course=html">
+<button>Start</button>
+</a>
+</div><div class="course-card">
+<h3>CSS</h3>
+<p>Design web pages</p>
+<a href="videos.html?course=css">
+<button>Start</button>
+</a>
+</div><div class="course-card">
+<h3>JavaScript</h3>
+<p>Make websites interactive</p>
+<a href="videos.html?course=javascript">
+<button>Start</button>
+</a>
+</div><div class="course-card">
+<h3>Artificial Intelligence</h3>
+<p>Intro to AI</p>
+<a href="videos.html?course=ai">
+<button>Start</button>
+</a>
+</div><div class="course-card">
+<h3>DBMS</h3>
+<p>Database systems</p>
+<a href="videos.html?course=dbms">
+<button>Start</button>
+</a>
+</div></div>
+</div></body>
+</html>

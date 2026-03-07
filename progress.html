@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Learning Progress</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+background-image: url("https://images.unsplash.com/photo-1557683316-973673baf926");
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+margin:0;
+padding:0;
+}
+
+.page-title{
+text-align:center;
+margin-top:30px;
+font-size:34px;
+font-weight:bold;
+}
+
+.progress-container{
+max-width:1100px;
+margin:40px auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+padding:20px;
+}
+
+.course-card{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+/* Circular progress */
+
+.circle{
+width:120px;
+height:120px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:20px;
+font-weight:bold;
+margin:15px auto;
+background:conic-gradient(#4CAF50 0deg,#ddd 0deg);
+}
+
+.circle span{
+background:white;
+width:90px;
+height:90px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.button-container{
+text-align:center;
+margin-top:30px;
+}
+
+.dashboard-btn{
+padding:12px 25px;
+background:#007BFF;
+color:white;
+border:none;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1 class="page-title">Your Learning Progress</h1>
+
+<div class="progress-container">
+
+<div class="course-card">
+<h3>C Programming</h3>
+<div class="circle" id="cCircle"><span id="cText">0%</span></div>
+</div>
+
+<div class="course-card">
+<h3>C++</h3>
+<div class="circle" id="cppCircle"><span id="cppText">0%</span></div>
+</div>
+
+<div class="course-card">
+<h3>Python</h3>
+<div class="circle" id="pythonCircle"><span id="pythonText">0%</span></div>
+</div>
+
+<div class="course-card">
+<h3>DSA</h3>
+<div class="circle" id="dsaCircle"><span id="dsaText">0%</span></div>
+</div>
+
+<div class="course-card">
+<h3>HTML</h3>
+<div class="circle" id="htmlCircle"><span id="htmlText">0%</span></div>
+</div>
+
+<div class="course-card">
+<h3>CSS</h3>
+<div class="circle" id="cssCircle"><span id="cssText">0%</span></div>
+</div>
+
+<div class="course-card">
+<h3>JavaScript</h3>
+<div class="circle" id="javascriptCircle"><span id="javascriptText">0%</span></div>
+</div>
+
+<div class="course-card">
+<h3>Artificial Intelligence</h3>
+<div class="circle" id="aiCircle"><span id="aiText">0%</span></div>
+</div>
+
+<div class="course-card">
+<h3>DBMS</h3>
+<div class="circle" id="dbmsCircle"><span id="dbmsText">0%</span></div>
+</div>
+
+</div>
+
+<div class="button-container">
+<a href="dashboard.html">
+<button class="dashboard-btn">Back to Dashboard</button>
+</a>
+</div>
+
+<script>
+
+function updateProgress(course,totalVideos){
+
+let watched = localStorage.getItem(course+"Progress") || 0;
+
+watched = Number(watched);
+
+let percent = Math.round((watched/totalVideos)*100);
+
+document.getElementById(course+"Text").innerText = percent + "%";
+
+let degree = percent * 3.6;
+
+document.getElementById(course+"Circle").style.background =
+`conic-gradient(#4CAF50 ${degree}deg,#ddd ${degree}deg)`;
+
+}
+
+updateProgress("c",4);
+updateProgress("cpp",4);
+updateProgress("python",4);
+updateProgress("dsa",4);
+updateProgress("html",4);
+updateProgress("css",4);
+updateProgress("javascript",4);
+updateProgress("ai",4);
+updateProgress("dbms",4);
+
+</script>
+
+</body>
+</html>

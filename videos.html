@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Course Videos</title>
+
+<style>
+body{
+font-family:Arial;
+text-align:center;
+background:#f2f2f2;
+}
+
+.video-container{
+width:60%;
+margin:auto;
+margin-top:40px;
+}
+
+iframe{
+width:100%;
+height:400px;
+border-radius:10px;
+}
+
+.controls{
+margin-top:20px;
+}
+
+button{
+padding:12px 25px;
+margin:10px;
+font-size:16px;
+background:#007BFF;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0056b3;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Course Videos</h1>
+
+<div class="video-container">
+
+<div id="video-player"></div>
+
+<div class="controls">
+<button onclick="prevVideo()">⬅ Back</button>
+<button onclick="nextVideo()">Next ➡</button>
+</div>
+
+</div>
+
+<script src="youtube.js"></script>
+
+</body>
+</html>
