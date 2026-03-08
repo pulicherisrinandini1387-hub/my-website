@@ -2,14 +2,12 @@
   "name": "LearningApp",
   "short_name": "LearningApp",
   "description": "Website for learning programming and study resources",
-  "id": "/learningapp",
+  "id": "/my-website/",
   "start_url": "/my-website/",
   "scope": "/my-website/",
   "display": "standalone",
-  "orientation": "any",
   "background_color": "#ffffff",
   "theme_color": "#0f172a",
-  "lang": "en",
   "icons": [
     {
       "src": "icon-192.png",
